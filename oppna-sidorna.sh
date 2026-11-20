@@ -18,6 +18,7 @@ fi
 
 total=$(( $(grep -c . sajter.tsv) - 1 ))
 i=0
+avbruten=0
 
 echo
 echo "Öppnar $total sajter, en i taget. Signera med BankID eller fyll i formuläret själv på varje."
@@ -28,10 +29,17 @@ while IFS=$'\t' read -r namn url steg <&3; do
   open_url "$url" >/dev/null 2>&1 || echo "  (Kunde inte öppna webbläsaren. Öppna länken ovan själv.)"
   if [ "$i" -lt "$total" ]; then
     read -r -p "  Enter = nästa sajt, a = avsluta: " svar || svar=a
-    if [ "$svar" = a ]; then break; fi
+    if [ "$svar" = a ]; then
+      avbruten=1
+      break
+    fi
   fi
 done 3< <(tail -n +2 sajter.tsv)
 
 echo
-echo "Klart. Sök på ditt namn på sajterna om en vecka och kolla att du är borta."
+if [ "$avbruten" -eq 1 ]; then
+  echo "Avbrutet efter $i av $total sajter. $((total - i)) återstår."
+else
+  echo "Alla $total sajter genomgångna. Sök på ditt namn om en vecka och kolla att du är borta."
+fi
 echo "Står du kvar: se \"Står du kvar, eller saknar du BankID?\" i README.md."

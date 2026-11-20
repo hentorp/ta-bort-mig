@@ -94,7 +94,20 @@ powershell -ExecutionPolicy Bypass -File .\oppna-sidorna.ps1
 
 ## Med en AI-agent
 
-Öppna mappen i din agent och skriv till exempel:
+Klona repot och öppna projektmappen i din agent. Agenten behöver kunna läsa
+`AGENTS.md` och `sajter.tsv` lokalt, eller uttryckligen hämta dem från GitHub.
+Enbart en GitHub-länk garanterar inte att alla agenter hittar instruktionerna.
+
+```bash
+git clone https://github.com/hentorp/ta-bort-mig.git
+cd ta-bort-mig
+```
+
+Starta exempelvis `codex` eller `claude` från projektmappen om du har respektive
+verktyg installerat. I Cursor kan du öppna projektmappen som workspace.
+Kontrollera att agenten har läst `AGENTS.md` innan du fortsätter.
+
+Skriv till exempel:
 
 > Hjälp mig ta bort mig från söktjänsterna.
 
@@ -102,8 +115,9 @@ Agenten följer [AGENTS.md](AGENTS.md). Den öppnar en sida i taget och väntar 
 signerar. Den klickar aldrig på BankID-knappar åt dig och ber aldrig om ditt personnummer
 eller en bild på din legitimation. Gör den det ändå, avbryt.
 
-Agenter som kan styra en webbläsare kan också få länken till repot direkt:
-`https://github.com/hentorp/ta-bort-mig`.
+Agenter med GitHub-åtkomst och webbläsarstöd kan också få länken direkt:
+`https://github.com/hentorp/ta-bort-mig`. Be då agenten bekräfta att den
+har läst `AGENTS.md` och `sajter.tsv` innan den börjar.
 
 ## Efteråt
 
