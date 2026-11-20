@@ -4,7 +4,8 @@ Ett tiotal svenska sajter visar din adress, ålder, inkomst och dina grannar fö
 helst. I dag kan du ta bort dig från de flesta med BankID eller ett kort formulär. Det
 tar ungefär en kvart och kostar ingenting.
 
-*Länkarna kontrollerades senast 20 november 2026.*
+*Länkarna kontrollerades senast 20 november 2026. Har något ändrats?
+[Bidra gärna](#bidra).*
 
 ## Välj ett sätt
 
@@ -45,18 +46,25 @@ formulären. Ingen kan göra det åt dig, och det är meningen.
 förundersökningar. Begär borttagning via deras kontaktformulär; redaktionen avgör själv.
 IMY har förelagt båda att se till att uppgifter om brott inte visas vid sökning på namn,
 personnummer eller adress, men det gäller först när besluten vunnit laga kraft.
-Fuplex, Verifiera och Acta Publica beskriver ingen väg för att ta bort en dom.
+För Fuplex, Verifiera och Acta Publica, se tabellen nedan.
 
-### Går inte att ta bort
+### Går inte att ta bort, än så länge
 
-- **Lönia** (inkomster) tar bara bort personer med skyddade personuppgifter.
-- **Biluppgifter.se** har ingen väg för borttagning. Uppgifterna kommer från
-  Transportstyrelsens fordonsregister, som är offentligt.
-- **Allabolag och Bolagsfakta** visar styrelseuppdrag från Bolagsverket, som är
-  offentliga. Står din bostadsrättsförening med adressen c/o dig kan styrelsen byta
-  föreningens adress hos Bolagsverket utan kostnad.
-- **Car.info och Bilregistret.ai** visar inte ägarens namn, så där behöver du inte göra
-  något.
+De här tjänsterna erbjuder ingen borttagning i dag. Läget ändras, så vet du att någon av
+dem har infört det, [berätta gärna](#bidra).
+
+| Tjänst | Vad den visar | Varför det inte går | Vad du kan göra |
+|--------|---------------|---------------------|-----------------|
+| **Lönia** | Inkomst | Tar bara bort personer med skyddade personuppgifter. | Fel uppgifter rättas via [lönia.se/begar-rattelse](https://xn--lnia-5qa.se/begar-rattelse). Du kan ändå begära radering med [mejlmallen](#mejlmall) till info@lönia.se. |
+| **Biluppgifter.se** | Fordon och vem som äger dem | Ingen väg för borttagning. Uppgifterna kommer från Transportstyrelsens fordonsregister, som är offentligt. | Begär radering med [mejlmallen](#mejlmall) till info@biluppgifter.se. Ägaren går ändå att få fram via sms till 71640. |
+| **Allabolag.se** | Styrelseuppdrag och bolag du är kopplad till | Bolagsverkets uppgifter är offentliga. | Står din bostadsrättsförening med adressen c/o dig kan styrelsen byta föreningens adress hos Bolagsverket utan kostnad. |
+| **Bolagsfakta.se** | Samma som Allabolag | Ingen väg att ta bort en ansvarig person. Avregistrerade aktiebolag tas bort efter fem år. | Samma som för Allabolag. |
+| **Lantmäteriet** (*Vem äger fastigheten*) | Fastigheter du äger | Fastighetsregistret är offentligt, och Lantmäteriet anger ingen spärr. | Inget. |
+| **Fuplex.se** | Domar | Ingen beskriven väg för borttagning. | Mejla kundtjanst@fuplex.se med målnumret och fråga. |
+| **Verifiera.se** | Domar | Ingen beskriven väg för borttagning. | Mejla redaktion@verifiera.se med målnumret och fråga. |
+| **Acta Publica** | Domar, säljs bara till företag och organisationer | Ingen väg för borttagning. | Inget. |
+
+Car.info och Bilregistret.ai visar inte ägarens namn, så där behöver du inte göra något.
 
 ## Skriptet
 
@@ -184,12 +192,28 @@ Grundlagen har inte ändrats, men de flesta sajterna erbjuder i dag borttagning 
 - Ingen seriös sajt ringer upp dig och ber dig signera.
 - Repot innehåller inga personuppgifter och skickar inget någonstans.
 
-## Hittat en trasig länk?
+## Bidra
 
-Öppna ett issue eller skicka en pull request. Alla länkar och steg finns i
-[`sajter.tsv`](sajter.tsv). Ändrar du den, uppdatera tabellerna ovan också.
+Läget förändras hela tiden. Sajter inför borttagning, byter adress eller lägger ner, och
+nya dyker upp. Vi tar gärna emot uppdateringar allt eftersom.
 
-Innehållet är fritt att använda och kopiera ([CC0](LICENSE)).
+- **[Öppna ett issue](https://github.com/hentorp/ta-bort-mig/issues/new)** om en länk
+  inte fungerar, ett steg har ändrats, en ny sajt har dykt upp, eller en tjänst i
+  tabellen [Går inte att ta bort](#går-inte-att-ta-bort-än-så-länge) har infört
+  borttagning.
+- **Skicka en pull request** om du vill ändra själv. Alla länkar och steg finns i
+  [`sajter.tsv`](sajter.tsv), som är tabbseparerad. Uppdatera tabellerna här i README och
+  datumet för senaste kontroll i samma ändring.
+
+Så blir ditt bidrag lätt att ta emot:
+
+- Länka till sajtens **egen** borttagningssida, inte till en guide eller en betaltjänst.
+- Skriv när och hur du kontrollerade sidan, till exempel "provade själv 2026-12-01".
+- Ta aldrig med personuppgifter i issues och pull requests: inga namn, adresser,
+  personnummer eller skärmdumpar där sådant syns.
+
+Innehållet är fritt att använda och kopiera ([CC0](LICENSE)). Genom att bidra godkänner
+du att ditt bidrag släpps under samma licens.
 
 ---
 
