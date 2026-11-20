@@ -9,10 +9,11 @@ tar ungefär en kvart och kostar ingenting.
 
 ## Välj ett sätt
 
-1. **[Klicka själv](#sajterna)**: gå igenom tabellen nedan.
-2. **[Kör skriptet](#skriptet)**: det öppnar sidorna åt dig, en i taget.
-3. **[Låt en AI-agent guida dig](#med-en-ai-agent)**: peka Claude Code, Codex, Cursor
-   eller en liknande agent mot repot.
+1. **[Låt en AI-assistent guida dig](#med-en-ai-assistent), det går snabbast.** Fungerar
+   lika bra på mobilen som på datorn. Assistenten ger dig en länk i taget och säger vad
+   du ska klicka på.
+2. **[Klicka själv](#sajterna)**: gå igenom tabellerna nedan.
+3. **[Kör skriptet](#skriptet)**: det öppnar sidorna åt dig, en i taget.
 
 Oavsett vilket sätt du väljer signerar du själv med BankID och fyller själv i
 formulären. Ingen kan göra det åt dig, och det är meningen.
@@ -92,7 +93,30 @@ bash oppna-sidorna.sh
 powershell -ExecutionPolicy Bypass -File .\oppna-sidorna.ps1
 ```
 
-## Med en AI-agent
+## Med en AI-assistent
+
+Det här är det snabbaste sättet. Assistenten tar dig igenom sajterna en i taget, säger
+vad du ska klicka på och håller reda på vad som är kvar. Gör du det på mobilen öppnas
+BankID direkt på samma telefon, så du slipper skanna QR-koder.
+
+### På mobilen eller i en chatt
+
+Öppna en AI-app med webbåtkomst, till exempel Claude, ChatGPT eller Gemini, och klistra
+in:
+
+```text
+Läs instruktionerna i
+https://raw.githubusercontent.com/hentorp/ta-bort-mig/main/AGENTS.md
+och listan i
+https://raw.githubusercontent.com/hentorp/ta-bort-mig/main/sajter.tsv
+Bekräfta att du har läst dem. Guida mig sedan genom att ta bort mig från
+söktjänsterna, en sajt i taget.
+```
+
+Assistenten visar en länk i taget. Tryck på den, gör det som steget säger och skriv
+"klar" när du är färdig.
+
+### I en kodagent på datorn
 
 Klona repot och öppna projektmappen i din agent. Agenten behöver kunna läsa
 `AGENTS.md` och `sajter.tsv` lokalt, eller uttryckligen hämta dem från GitHub.
@@ -111,17 +135,18 @@ Skriv till exempel:
 
 > Hjälp mig ta bort mig från söktjänsterna.
 
-Agenten följer [AGENTS.md](AGENTS.md). Den öppnar en sida i taget och väntar medan du
+### Oavsett var
+
+Assistenten följer [AGENTS.md](AGENTS.md). Den tar en sajt i taget och väntar medan du
 signerar. Den klickar aldrig på BankID-knappar åt dig och ber aldrig om ditt personnummer
 eller en bild på din legitimation. Gör den det ändå, avbryt.
-
-Agenter med GitHub-åtkomst och webbläsarstöd kan också få länken direkt:
-`https://github.com/hentorp/ta-bort-mig`. Be då agenten bekräfta att den
-har läst `AGENTS.md` och `sajter.tsv` innan den börjar.
 
 ## Efteråt
 
 - **Vänta en vecka** och sök sedan på ditt namn på varje sajt. Kör gärna skriptet igen.
+- **Gör om det om ett år.** Flera har märkt att profilerna dyker upp igen efter ungefär
+  ett år, eftersom sajterna hämtar om uppgifterna från offentliga register. Lägg in en
+  påminnelse i kalendern.
 - **MrKoll** döljer ibland bara gatuadressen och låter namn och postnummer stå kvar. Står
   du kvar, [mejla dem](#står-du-kvar-eller-saknar-du-bankid).
 - **Gör ditt telefonnummer hemligt** hos din operatör. Annars kan Hitta och Eniro
@@ -232,5 +257,8 @@ du att ditt bidrag släpps under samma licens.
 ---
 
 **In English:** every link in the tables opens the site's own removal page. Sites 1–7
-need a Swedish BankID; sites 8–12 use a short form. Run `bash oppna-sidorna.sh` to open
-the pages one by one, or point an AI agent at this repo; it follows [AGENTS.md](AGENTS.md).
+need a Swedish BankID; sites 8–12 use a short form. The fastest way is an AI assistant,
+on your phone or computer: paste the prompt under
+[Med en AI-assistent](#med-en-ai-assistent) and it walks you through one site at a time,
+following [AGENTS.md](AGENTS.md). You can also run `bash oppna-sidorna.sh`. Repeat the
+whole thing in a year, since profiles tend to reappear.

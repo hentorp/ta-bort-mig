@@ -13,7 +13,8 @@ själv signerar med BankID.
    "Står du kvar, eller saknar du BankID?" i `README.md` för resten.
 3. Ta en sajt i taget:
    - Öppna `url` i användarens webbläsare: `open` på macOS, `xdg-open` på Linux,
-     `start "" "<url>"` på Windows, eller ditt eget webbläsarverktyg.
+     `start "" "<url>"` på Windows, eller ditt eget webbläsarverktyg. Är du en
+     chattassistent, till exempel i en mobilapp, visar du `url` som en klickbar länk.
    - Berätta i en mening vad användaren ska göra. Utgå från kolumnen `steg`.
    - Vänta tills användaren säger att hen är klar eller vill hoppa över. Öppna inte
      nästa sida innan dess.
@@ -23,7 +24,11 @@ själv signerar med BankID.
    fyllas i, men låt användaren fylla i och skicka själv.
 6. Nämn i en mening att avsnittet "Har du en dom eller ett brottmål?" i `README.md`
    finns för den som behöver det. Fråga inte om användaren har en dom.
-7. Avsluta med punkterna under "Efteråt" i `README.md`.
+7. Gå igenom punkterna under "Efteråt" i `README.md`.
+8. Föreslå att användaren gör om hela genomgången om ett år och lägger in en påminnelse
+   i kalendern. Flera har märkt att profilerna dyker upp igen efter ungefär ett år,
+   eftersom sajterna hämtar om uppgifterna från offentliga register. Skapa inte
+   påminnelsen själv om inte användaren ber om det.
 
 Kan du inte öppna en webbläsare, kör `bash oppna-sidorna.sh` (macOS/Linux) eller
 `powershell -ExecutionPolicy Bypass -File .\oppna-sidorna.ps1` (Windows) i användarens
