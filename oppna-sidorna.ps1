@@ -6,7 +6,7 @@ $sajter = @(Import-Csv -Path (Join-Path $PSScriptRoot 'sajter.tsv') -Delimiter "
 $total = $sajter.Count
 
 Write-Host ""
-Write-Host "Öppnar $total sajter, en i taget. Signera själv med BankID på varje."
+Write-Host "Öppnar $total sajter, en i taget. Signera med BankID eller fyll i formuläret själv på varje."
 
 for ($i = 0; $i -lt $total; $i++) {
     $s = $sajter[$i]

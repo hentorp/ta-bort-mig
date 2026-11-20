@@ -20,7 +20,7 @@ total=$(( $(grep -c . sajter.tsv) - 1 ))
 i=0
 
 echo
-echo "Öppnar $total sajter, en i taget. Signera själv med BankID på varje."
+echo "Öppnar $total sajter, en i taget. Signera med BankID eller fyll i formuläret själv på varje."
 
 while IFS=$'\t' read -r namn url steg <&3; do
   i=$((i + 1))

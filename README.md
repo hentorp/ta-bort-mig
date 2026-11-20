@@ -1,8 +1,8 @@
 # Ta bort dig från Ratsit, MrKoll, Hitta och de andra
 
-Sju svenska sajter visar din adress, ålder och dina grannar för vem som helst. I dag kan
-du ta bort dig från nästan alla med BankID. Det tar ungefär tio minuter och kostar
-ingenting.
+Ett tiotal svenska sajter visar din adress, ålder, inkomst och dina grannar för vem som
+helst. I dag kan du ta bort dig från de flesta med BankID eller ett kort formulär. Det
+tar ungefär en kvart och kostar ingenting.
 
 *Länkarna kontrollerades senast 20 november 2026.*
 
@@ -13,8 +13,8 @@ ingenting.
 3. **[Låt en AI-agent guida dig](#med-en-ai-agent)**: peka Claude Code, Codex, Cursor
    eller en liknande agent mot repot.
 
-Oavsett vilket sätt du väljer signerar du själv med BankID. Ingen kan göra det åt dig,
-och det är meningen.
+Oavsett vilket sätt du väljer signerar du själv med BankID och fyller själv i
+formulären. Ingen kan göra det åt dig, och det är meningen.
 
 ## Sajterna
 
@@ -27,6 +27,36 @@ och det är meningen.
 | 5 | [**Eniro**](https://uppdatera.eniro.se/person) | Sök på ditt namn, logga in med BankID och välj *Dölj mig*. |
 | 6 | **Birthday.se** | Har ingen BankID-sida. Mejla [info@birthday.se](mailto:info@birthday.se?subject=Radera%20mina%20personuppgifter) och be dem radera dina uppgifter. Skriv ditt namn och din adress så att de hittar rätt person. Använd gärna [mallen](#mejlmall). |
 | 7 | [**Upplysning.se**](https://selfservice.upplysning.se/) | Sökningen är pausad sedan augusti 2026, och de uppger att de bara behandlar uppgifter om medlemmar. Logga in med BankID om du vill kontrollera. |
+
+### Fler tjänster, med formulär i stället för BankID
+
+| # | Sajt | Gör så här |
+|---|------|------------|
+| 8 | [**Mantal.se**](https://mantal.se/ta-bort) | Personsök. Sök först fram dig själv på mantal.se och kopiera länken. Klistra in den i formuläret och skicka. Redaktionen prövar varje begäran. |
+| 9 | [**Kollalön.se**](https://xn--kollaln-f1a.se/#tabort) | Visar din inkomst. Fyll i namn, gatuadress och kommun i formuläret längst ner på sidan. |
+| 10 | [**Truecaller**](https://www.truecaller.com/unlisting) | Visar ditt namn när du ringer. Klicka *No, I want to unlist*, skriv in ditt nummer och bekräfta. Har du appen, avaktivera kontot där först. Går inte att ångra. |
+| 11 | [**Sync.me**](https://sync.me/optout) | Som Truecaller. Fyll i namn, e-post och nummer. Ska gå igenom inom 24 timmar, men numret kan dyka upp igen. |
+| 12 | [**180.se**](https://www.180.se/kontakta) | Kommentarer om telefonnummer. Mejla support@180.se och be dem ta bort ditt nummer. De avgör själva vad som tas bort. |
+
+### Har du en dom eller ett brottmål?
+
+[**Lexbase**](https://www.lexbase.se/fragor-och-svar) och
+[**Krimfup**](https://www.krimfup.se/fragor-och-svar) publicerar domar och
+förundersökningar. Begär borttagning via deras kontaktformulär; redaktionen avgör själv.
+IMY har förelagt båda att se till att uppgifter om brott inte visas vid sökning på namn,
+personnummer eller adress, men det gäller först när besluten vunnit laga kraft.
+Fuplex, Verifiera och Acta Publica beskriver ingen väg för att ta bort en dom.
+
+### Går inte att ta bort
+
+- **Lönia** (inkomster) tar bara bort personer med skyddade personuppgifter.
+- **Biluppgifter.se** har ingen väg för borttagning. Uppgifterna kommer från
+  Transportstyrelsens fordonsregister, som är offentligt.
+- **Allabolag och Bolagsfakta** visar styrelseuppdrag från Bolagsverket, som är
+  offentliga. Står din bostadsrättsförening med adressen c/o dig kan styrelsen byta
+  föreningens adress hos Bolagsverket utan kostnad.
+- **Car.info och Bilregistret.ai** visar inte ägarens namn, så där behöver du inte göra
+  något.
 
 ## Skriptet
 
@@ -157,12 +187,12 @@ Grundlagen har inte ändrats, men de flesta sajterna erbjuder i dag borttagning 
 ## Hittat en trasig länk?
 
 Öppna ett issue eller skicka en pull request. Alla länkar och steg finns i
-[`sajter.tsv`](sajter.tsv). Ändrar du den, uppdatera tabellen ovan också.
+[`sajter.tsv`](sajter.tsv). Ändrar du den, uppdatera tabellerna ovan också.
 
 Innehållet är fritt att använda och kopiera ([CC0](LICENSE)).
 
 ---
 
-**In English:** every link in the table opens the site's own BankID removal page. You
-need a Swedish BankID. Run `bash oppna-sidorna.sh` to open the pages one by one, or point
-an AI agent at this repo; it follows [AGENTS.md](AGENTS.md).
+**In English:** every link in the tables opens the site's own removal page. Sites 1–7
+need a Swedish BankID; sites 8–12 use a short form. Run `bash oppna-sidorna.sh` to open
+the pages one by one, or point an AI agent at this repo; it follows [AGENTS.md](AGENTS.md).
