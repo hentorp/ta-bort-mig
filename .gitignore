@@ -1,6 +1,6 @@
-node_modules/
+# Lokala filer från den tidigare Node-versionen (kan innehålla personuppgifter)
 config.json
 state.json
-logs/
-klagomal/
 debug/
+klagomal/
+node_modules/
